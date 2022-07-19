@@ -1,0 +1,1 @@
+ {% for user_name, user_info in pillar['users'].iteritems() %} {{ user_name }}: user.present: - shell: {{ user_info['shell'] }} {% endfor %}
