@@ -11,3 +11,6 @@ base:
   'd11-12':
     - formulas.webserver_setup
     - formulas.percona.percona
+
+  'c7-13':
+    - formulas.erlang
