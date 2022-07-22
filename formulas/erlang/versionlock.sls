@@ -4,4 +4,4 @@ versionlock_package:
 
 add_versionlock_erlang:
   cmd.run:
-    - unless: yum versionlock erlang-19.3 erlang-*-19.3
+    - name: yum versionlock erlang-19.3 erlang-*-19.3
