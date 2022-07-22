@@ -5,6 +5,7 @@ erlang-repo:
     - gpgcheck: 1
     - gpgkey: http://packages.erlang-solutions.com/debian/erlang_solutions.asc
 
-mysql_package:
+erlang_package:
   pkg.installed:
-   - name: erlang
+    - name: erlang-erts
+    - version: 19.3
