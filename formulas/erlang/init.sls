@@ -1,3 +1,6 @@
+include:
+  - formulas.erlang.versionlock
+
 erlang-repo:
   pkgrepo.managed:
     - humanname: Centos $releasever - $basearch - Erlang Solutions
