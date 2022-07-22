@@ -7,5 +7,5 @@ versionlock_package:
 #    - pkgs: ["erlang-19.3", "erlang-*-19.3"]
 
 version_hold:
-  yumpkg.list_holds:
+  pkg.list_holds:
     - pattern: erlang-19.3
