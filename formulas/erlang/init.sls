@@ -12,4 +12,5 @@ erlang_package:
   pkg.installed:
     - name: erlang-erts
     - version: 19.3
-    - update_holds: True
+    - update_holds: true
+    - hold: true
