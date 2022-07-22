@@ -2,10 +2,8 @@ versionlock_package:
   pkg.installed:
     - name: yum-plugin-versionlock
 
-#version_hold:
-#  pkg.hold:
-#    - pkgs: ["erlang-19.3", "erlang-*-19.3"]
-
-version_hold:
-  pkg.list_holds:
-    - pattern: erlang-19.3
+add_versionlock_erlang:
+  cmd.run:
+    - name: versionlock
+    - onchanges:
+        - cmd: yum versionlock erlang-19.3 erlang-*-19.3
