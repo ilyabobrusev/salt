@@ -13,4 +13,3 @@ erlang_package:
     - name: erlang-erts
     - version: 19.3
     - update_holds: true
-    - hold: true
