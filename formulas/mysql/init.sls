@@ -1,3 +1,4 @@
+{% if grains['os'] == 'Debian' %}
 mysql-repo:
   pkgrepo.managed:
     - humanname: MySQL Repo
@@ -13,10 +14,15 @@ mysql-repo:
       file: /etc/apt/sources.list.d/mysql.list
       refresh: True
       key_url: http://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+{% endif %}
 
 mysql_package:
   pkg.installed:
-   - name: mysql-server
+    {% if grains['os'] == 'Debian' %}
+    - name: mysql-server
+    {% else %}
+    - name: mariadb-server
+    {% endif %}
 
 mysql_conf:
   file.managed:
