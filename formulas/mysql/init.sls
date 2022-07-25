@@ -26,7 +26,11 @@ mysql_package:
 
 mysql_conf:
   file.managed:
+    {% if grains['os'] == 'Debian' %}
     - name: /etc/mysql/mysql.conf.d/mysqld.cnf
+    {% else %}
+    - name: /etc/my.cnf
+    {% endif %}
     - source: salt://formulas/mysql/files/mysqld.cnf
     - user: root
     - group: root
