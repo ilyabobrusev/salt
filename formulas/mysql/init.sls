@@ -27,7 +27,7 @@ mysql_package:
 mysql_conf:
   file.managed:
     - name: /etc/mysql/mysql.conf.d/mysqld.cnf
-    - source: salt://formulas/mysql/files/mysqld.cnf
+    - source: formulas/mysql/files/mysqld.cnf
     - user: root
     - group: root
     - mode: 0644
