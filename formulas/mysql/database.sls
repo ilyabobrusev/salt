@@ -22,5 +22,5 @@ databases_to_remove:
   mysql_database.absent:
     - name: test
     - require:
-      - pkg: python3-mysqldb
+      - pkg: install_python_pkg
       - service: mysql_service
