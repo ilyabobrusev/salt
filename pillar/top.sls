@@ -7,3 +7,5 @@ base:
   'os_family:debian':
     - match: grain
     - pub_ssh_key
+  'c7-13':
+    - mysql
