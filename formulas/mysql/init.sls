@@ -40,7 +40,11 @@ mysql_conf:
 
 mysql_service:
   service:
+    {% if grains['os'] == 'Debian' %}
     - name: mysql
+    {% else %}
+    - name: mariadb
+    {% endif %}
     - running
     - enable: True
     - reload: True
