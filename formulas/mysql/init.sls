@@ -31,7 +31,11 @@ mysql_conf:
     {% else %}
     - name: /etc/my.cnf
     {% endif %}
+    {% if grains['os'] == 'Debian' %}
     - source: salt://formulas/mysql/files/mysqld.cnf
+    {% else %}
+    - source: salt://formulas/mysql/files/my.cnf
+    {% endif %}
     - user: root
     - group: root
     - mode: 0644
