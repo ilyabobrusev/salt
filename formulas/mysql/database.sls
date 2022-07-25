@@ -15,7 +15,7 @@ stg_databases:
   mysql_database.present:
     - name: stagingdb
     - require:
-      - pkg: python3-mysqldb
+      - pkg: install_python_pkg
       - service: mysql_service
 
 databases_to_remove:
